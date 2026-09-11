@@ -2,55 +2,11 @@
 
 import { useState } from 'react'
 import Footer from '@/shared/components/Footer'
-import { EVENTO, AFCADEMIA, PONENTE } from '@/shared/constants/evento'
-
-const DELIVERABLES = [
-  {
-    num: '01',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20" /><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" /><path d="M9 7h7M9 11h5" /></svg>
-    ),
-    title: 'Manual del Alumno',
-    desc: 'Guía completa paso a paso para construir tu primera automatización de email desde cero.',
-    tag: 'PDF Guía',
-  },
-  {
-    num: '02',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20h9" /><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" /></svg>
-    ),
-    title: 'Cuaderno de Prácticas',
-    desc: 'Ejercicios y plantillas para que practiques y consolides lo aprendido en la charla.',
-    tag: 'Ejercicios',
-  },
-  {
-    num: '03',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" /><path d="M8 21h8M12 17v4" /><path d="M7 12l3-3 2 2 4-4" /></svg>
-    ),
-    title: 'Diapositivas de la Charla',
-    desc: 'Todas las diapositivas de la sesión para que puedas repasar el contenido cuando quieras.',
-    tag: 'Presentación',
-  },
-  {
-    num: '04',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></svg>
-    ),
-    title: 'Cheatsheet Make.com + IA',
-    desc: 'Hoja de referencia rápida con los módulos, conexiones y prompts más usados. Tenla siempre a mano.',
-    tag: 'Referencia rápida',
-  },
-  {
-    num: '05',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 3l1.8 4.6L18.5 9.5l-4.7 1.9L12 16l-1.8-4.6L5.5 9.5l4.7-1.9L12 3z" /><path d="M19 15l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8.8-2z" /><path d="M5 16l.6 1.4L7 18l-1.4.6L5 20l-.6-1.4L3 18l1.4-.6L5 16z" /></svg>
-    ),
-    title: 'Plantillas de Prompts',
-    desc: 'Los 3 prompts listos para copiar y pegar en Make. Adaptables a tu despacho.',
-    tag: 'Prompts IA',
-  },
-]
+import SiteHeader from '@/shared/components/SiteHeader'
+import MoreSection from '@/shared/components/MoreSection'
+import MaterialIcon from '@/shared/components/MaterialIcon'
+import { EVENTO, PONENTE } from '@/shared/constants/evento'
+import { MATERIALES } from '@/shared/constants/materiales'
 
 const STEPS = [
   { n: '1', title: 'Déjanos tu email', text: 'Nombre y correo. Nada más.' },
@@ -94,24 +50,7 @@ export default function Home() {
 
   return (
     <main className="lp">
-      {/* HEADER */}
-      <header className="lp-header">
-        <div className="lp-container lp-header__inner">
-          <a href="/" className="lp-brand" aria-label="AFCademía">
-            <img src="/logo-afcademia.webp" alt="" width={36} height={36} />
-            <span>AFC<em>ademia</em></span>
-          </a>
-          <nav className="lp-header__nav">
-            <a href={AFCADEMIA.catalogo} target="_blank" rel="noopener noreferrer" className="lp-header__link">
-              Catálogo de cursos
-            </a>
-            <div className="lp-header__event">
-              <span className="lp-dot" />
-              {EVENTO.ciudad} · {EVENTO.fecha}
-            </div>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader />
 
       {/* HERO */}
       <section className="lp-hero">
@@ -183,10 +122,10 @@ export default function Home() {
 
         <div className="lp-container">
           <div className="lp-tiles">
-            {DELIVERABLES.map(d => (
+            {MATERIALES.map(d => (
               <article key={d.num} className="lp-tile">
                 <span className="lp-tile__num" aria-hidden="true">{d.num}</span>
-                <div className="lp-tile__icon">{d.icon}</div>
+                <div className="lp-tile__icon"><MaterialIcon num={d.num} /></div>
                 <div className="lp-tile__body">
                   <span className="lp-tile__tag">{d.tag}</span>
                   <h3>{d.title}</h3>
@@ -309,30 +248,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SEGUIR APRENDIENDO */}
-      <section className="lp-more">
-        <div className="lp-container lp-more__inner">
-          <div>
-            <span className="lp-eyebrow lp-eyebrow--light">Sigue aprendiendo</span>
-            <h2>¿Quieres ir más allá de la charla?</h2>
-            <p>
-              En AFCademIA encontrarás cursos completos para automatizar tu despacho con IA:
-              formación práctica, certificada y pensada para administradores de fincas.
-            </p>
-          </div>
-          <div className="lp-more__actions">
-            <a href={AFCADEMIA.catalogo} target="_blank" rel="noopener noreferrer" className="lp-btn lp-btn--primary">
-              Ver el catálogo de cursos
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14" /><path d="M12 5l7 7-7 7" />
-              </svg>
-            </a>
-            <a href={AFCADEMIA.web} target="_blank" rel="noopener noreferrer" className="lp-more__secondary">
-              Ir a afcademia.com <span aria-hidden="true">→</span>
-            </a>
-          </div>
-        </div>
-      </section>
+      <MoreSection />
 
       <Footer />
     </main>

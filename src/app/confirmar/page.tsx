@@ -1,21 +1,15 @@
 import Footer from '@/shared/components/Footer'
+import SiteHeader from '@/shared/components/SiteHeader'
 
 export default function ConfirmarPage() {
   return (
     <main style={{
       background: '#faf9f5',
       minHeight: '100vh',
-      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
-      display: 'flex',
+            display: 'flex',
       flexDirection: 'column',
     }}>
-      {/* HEADER */}
-      <header style={{ background: '#003366', padding: '16px 24px' }}>
-        <div style={{ maxWidth: 960, margin: '0 auto', display: 'flex', alignItems: 'center', gap: 10 }}>
-          <img src="/logo-afcademia.webp" alt="AFCademía" width={36} height={36} style={{ background: '#fff', borderRadius: 8, padding: 4 }} />
-          <span style={{ color: '#fff', fontWeight: 800, fontSize: 18, letterSpacing: '-0.5px' }}>AFC<span style={{ color: '#F87808' }}>ademia</span></span>
-        </div>
-      </header>
+      <SiteHeader />
 
       {/* CONTENT */}
       <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '48px 24px' }}>
