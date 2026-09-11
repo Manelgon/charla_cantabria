@@ -60,14 +60,14 @@ function MaterialItem({ m }: { m: typeof MATERIALS[0] }) {
         background: '#fff',
         border: '1.5px solid #e8e4dc',
         borderRadius: 16,
-        boxShadow: '0 2px 12px rgba(0,63,107,0.06)',
+        boxShadow: '0 2px 12px rgba(0,51,102,0.06)',
         transition: 'box-shadow 0.15s ease',
       }}
       onMouseEnter={e => {
-        e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,63,107,0.12)'
+        e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,51,102,0.12)'
       }}
       onMouseLeave={e => {
-        e.currentTarget.style.boxShadow = '0 2px 12px rgba(0,63,107,0.06)'
+        e.currentTarget.style.boxShadow = '0 2px 12px rgba(0,51,102,0.06)'
       }}
     >
       {/* HEADER */}
@@ -75,7 +75,7 @@ function MaterialItem({ m }: { m: typeof MATERIALS[0] }) {
         <div style={{ display: 'flex', alignItems: 'center', gap: 16, flex: 1 }}>
           <div>
             <div style={{ fontSize: 11, color: '#aaa8a0', marginBottom: 4 }}>Material {m.num}</div>
-            <h3 style={{ fontSize: 15, fontWeight: 700, color: '#003F6B', marginBottom: 4 }}>{m.title}</h3>
+            <h3 style={{ fontSize: 15, fontWeight: 700, color: '#003366', marginBottom: 4 }}>{m.title}</h3>
             <p style={{ fontSize: 13, color: '#7a7060' }}>{m.subtitle}</p>
           </div>
         </div>
@@ -88,7 +88,7 @@ function MaterialItem({ m }: { m: typeof MATERIALS[0] }) {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            color: '#F47A20',
+            color: '#FF9900',
             fontSize: 20,
             transition: 'transform 0.2s',
             transform: expanded ? 'rotate(180deg)' : 'rotate(0deg)',
@@ -110,8 +110,8 @@ function MaterialItem({ m }: { m: typeof MATERIALS[0] }) {
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              background: 'rgba(244,122,32,0.1)',
-              color: '#F47A20',
+              background: 'rgba(255,153,0,0.1)',
+              color: '#FF9900',
               border: 'none',
               padding: '12px 16px',
               borderRadius: 8,
@@ -124,10 +124,10 @@ function MaterialItem({ m }: { m: typeof MATERIALS[0] }) {
               transition: 'background 0.2s',
             }}
             onMouseEnter={e => {
-              (e.target as HTMLElement).style.background = 'rgba(244,122,32,0.2)'
+              (e.target as HTMLElement).style.background = 'rgba(255,153,0,0.2)'
             }}
             onMouseLeave={e => {
-              (e.target as HTMLElement).style.background = 'rgba(244,122,32,0.1)'
+              (e.target as HTMLElement).style.background = 'rgba(255,153,0,0.1)'
             }}
           >
             🔗 Abrir recurso
@@ -139,7 +139,7 @@ function MaterialItem({ m }: { m: typeof MATERIALS[0] }) {
               window.location.href = `/api/download?file=${encodeURIComponent(fileName + '.html')}`
             }}
             style={{
-              background: '#F47A20',
+              background: '#FF9900',
               color: '#fff',
               border: 'none',
               padding: '12px 16px',
@@ -154,7 +154,7 @@ function MaterialItem({ m }: { m: typeof MATERIALS[0] }) {
               (e.target as HTMLElement).style.background = '#e06b1b'
             }}
             onMouseLeave={e => {
-              (e.target as HTMLElement).style.background = '#F47A20'
+              (e.target as HTMLElement).style.background = '#FF9900'
             }}
           >
             ⬇️ Descargar HTML
@@ -166,7 +166,7 @@ function MaterialItem({ m }: { m: typeof MATERIALS[0] }) {
               window.location.href = `/api/download?file=${encodeURIComponent(fileName)}`
             }}
             style={{
-              background: '#003F6B',
+              background: '#003366',
               color: '#fff',
               border: 'none',
               padding: '12px 16px',
@@ -178,10 +178,10 @@ function MaterialItem({ m }: { m: typeof MATERIALS[0] }) {
               transition: 'background 0.2s',
             }}
             onMouseEnter={e => {
-              (e.target as HTMLElement).style.background = '#012A47'
+              (e.target as HTMLElement).style.background = '#001f3f'
             }}
             onMouseLeave={e => {
-              (e.target as HTMLElement).style.background = '#003F6B'
+              (e.target as HTMLElement).style.background = '#003366'
             }}
           >
             ⬇️ Descargar PDF
@@ -227,8 +227,8 @@ function DescargaContent() {
         <div style={{ textAlign: 'center', padding: '80px 24px' }}>
           <div style={{
             width: 48, height: 48, borderRadius: '50%',
-            border: '3px solid rgba(0,63,107,0.15)',
-            borderTopColor: '#003F6B',
+            border: '3px solid rgba(0,51,102,0.15)',
+            borderTopColor: '#003366',
             margin: '0 auto 16px',
             animation: 'spin 0.8s linear infinite',
           }} />
@@ -244,7 +244,7 @@ function DescargaContent() {
       <PageShell>
         <div style={{ textAlign: 'center', padding: '80px 24px', maxWidth: 440, margin: '0 auto' }}>
           <div style={{ fontSize: 48, marginBottom: 16 }}>🔒</div>
-          <h1 style={{ fontSize: 24, fontWeight: 800, color: '#003F6B', marginBottom: 12 }}>
+          <h1 style={{ fontSize: 24, fontWeight: 800, color: '#003366', marginBottom: 12 }}>
             Enlace no válido
           </h1>
           <p style={{ color: '#7a7060', fontSize: 15, lineHeight: 1.6, marginBottom: 28 }}>
@@ -254,7 +254,7 @@ function DescargaContent() {
             href="/"
             style={{
               display: 'inline-block',
-              background: '#003F6B',
+              background: '#003366',
               color: '#fff',
               padding: '14px 28px',
               borderRadius: 12,
@@ -275,7 +275,7 @@ function DescargaContent() {
       <PageShell>
         <div style={{ textAlign: 'center', padding: '80px 24px', maxWidth: 440, margin: '0 auto' }}>
           <div style={{ fontSize: 48, marginBottom: 16 }}>⏰</div>
-          <h1 style={{ fontSize: 24, fontWeight: 800, color: '#003F6B', marginBottom: 12 }}>
+          <h1 style={{ fontSize: 24, fontWeight: 800, color: '#003366', marginBottom: 12 }}>
             Enlace caducado
           </h1>
           <p style={{ color: '#7a7060', fontSize: 15, lineHeight: 1.6, marginBottom: 28 }}>
@@ -285,7 +285,7 @@ function DescargaContent() {
             href="/"
             style={{
               display: 'inline-block',
-              background: '#003F6B',
+              background: '#003366',
               color: '#fff',
               padding: '14px 28px',
               borderRadius: 12,
@@ -305,12 +305,12 @@ function DescargaContent() {
     <PageShell>
       {/* SUCCESS BANNER */}
       <section style={{
-        background: 'linear-gradient(135deg, #003F6B 0%, #012A47 100%)',
+        background: 'linear-gradient(135deg, #003366 0%, #001f3f 100%)',
         padding: '48px 24px 80px',
         position: 'relative',
         overflow: 'hidden',
       }}>
-        <div style={{ position: 'absolute', top: -40, right: -40, width: 200, height: 200, borderRadius: '50%', background: 'rgba(244,122,32,0.15)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', top: -40, right: -40, width: 200, height: 200, borderRadius: '50%', background: 'rgba(255,153,0,0.15)', pointerEvents: 'none' }} />
         <div style={{ maxWidth: 640, margin: '0 auto', textAlign: 'center', position: 'relative' }}>
           <div style={{ fontSize: 44, marginBottom: 16 }}>🎉</div>
           <h1 style={{ color: '#fff', fontSize: 'clamp(22px, 4vw, 38px)', fontWeight: 900, marginBottom: 12, lineHeight: 1.2 }}>
@@ -333,19 +333,19 @@ function DescargaContent() {
 
         {/* UPSELL AFCADEMIA */}
         <div style={{
-          background: 'linear-gradient(135deg, #003F6B 0%, #012A47 100%)',
+          background: 'linear-gradient(135deg, #003366 0%, #001f3f 100%)',
           borderRadius: 24,
           padding: 'clamp(32px, 5vw, 56px)',
           position: 'relative',
           overflow: 'hidden',
         }}>
-          <div style={{ position: 'absolute', top: -30, right: -30, width: 180, height: 180, borderRadius: '50%', background: 'rgba(244,122,32,0.15)', pointerEvents: 'none' }} />
+          <div style={{ position: 'absolute', top: -30, right: -30, width: 180, height: 180, borderRadius: '50%', background: 'rgba(255,153,0,0.15)', pointerEvents: 'none' }} />
           <div style={{ position: 'relative', maxWidth: 620 }}>
             <div style={{
               display: 'inline-block',
-              background: 'rgba(244,122,32,0.2)',
-              border: '1px solid rgba(244,122,32,0.4)',
-              color: '#F47A20',
+              background: 'rgba(255,153,0,0.2)',
+              border: '1px solid rgba(255,153,0,0.4)',
+              color: '#FF9900',
               fontSize: 11, fontWeight: 700, letterSpacing: '0.1em',
               textTransform: 'uppercase' as const,
               padding: '5px 14px', borderRadius: 100, marginBottom: 20,
@@ -365,7 +365,7 @@ function DescargaContent() {
             <div style={{ display: 'flex', flexWrap: 'wrap' as const, gap: 12, marginBottom: 28 }}>
               {['Flujos completos de automatización', 'Casos reales de fincas', 'Comunidad de administradores', 'Actualizaciones incluidas'].map(b => (
                 <div key={b} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F47A20" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FF9900" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>
                   <span style={{ color: 'rgba(255,255,255,0.85)', fontSize: 14 }}>{b}</span>
                 </div>
               ))}
@@ -381,10 +381,10 @@ function DescargaContent() {
               }}
               style={{
                 display: 'inline-flex', alignItems: 'center', gap: 8,
-                background: '#F47A20', color: '#fff',
+                background: '#FF9900', color: '#fff',
                 padding: '15px 28px', borderRadius: 12,
                 fontSize: 15, fontWeight: 700, textDecoration: 'none',
-                boxShadow: '0 0 30px rgba(244,122,32,0.35)',
+                boxShadow: '0 0 30px rgba(255,153,0,0.35)',
               }}
             >
               Descubrir AFCademIA
@@ -416,10 +416,10 @@ export default function DescargaPage() {
 function PageShell({ children }: { children: React.ReactNode }) {
   return (
     <main style={{ background: '#faf9f5', minHeight: '100vh', fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif' }}>
-      <header style={{ background: '#003F6B', padding: '16px 24px' }}>
+      <header style={{ background: '#003366', padding: '16px 24px' }}>
         <div style={{ maxWidth: 960, margin: '0 auto', display: 'flex', alignItems: 'center', gap: 10 }}>
           <img src="/logo-afcademia.webp" alt="AFCademía" width={34} height={34} style={{ background: '#fff', borderRadius: 8, padding: 4 }} />
-          <span style={{ color: '#fff', fontWeight: 800, fontSize: 17 }}>AFC<span style={{ color: '#F47A20' }}>ademia</span></span>
+          <span style={{ color: '#fff', fontWeight: 800, fontSize: 17 }}>AFC<span style={{ color: '#FF9900' }}>ademia</span></span>
         </div>
       </header>
       {children}

@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Footer from '@/shared/components/Footer'
-import { EVENTO, AFCADEMIA } from '@/shared/constants/evento'
+import { EVENTO, AFCADEMIA, PONENTE } from '@/shared/constants/evento'
 
 const DELIVERABLES = [
   {
@@ -197,6 +197,29 @@ export default function Home() {
                 </div>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PONENTE */}
+      <section className="lp-speaker" id="ponente">
+        <div className="lp-container lp-speaker__grid">
+          <div className="lp-speaker__photo">
+            <img src="/roberto.webp" alt={PONENTE.nombre} width={900} height={1351} />
+          </div>
+          <div className="lp-speaker__body">
+            <span className="lp-eyebrow lp-eyebrow--light">Quién da la charla</span>
+            <h2>{PONENTE.nombre}</h2>
+            <p className="lp-speaker__role">{PONENTE.rol}</p>
+            <p className="lp-speaker__bio">{PONENTE.bio}</p>
+            <ul className="lp-speaker__keys">
+              {PONENTE.claves.map(c => (
+                <li key={c.titulo}>
+                  <b>{c.titulo}</b>
+                  <span>{c.texto}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>

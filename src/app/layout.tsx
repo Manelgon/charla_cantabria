@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import { Inter, Fraunces, IBM_Plex_Mono } from 'next/font/google'
+import { Poppins, Open_Sans, IBM_Plex_Mono } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800', '900'] })
-const fraunces = Fraunces({ subsets: ['latin'], weight: ['600', '700', '800'], variable: '--font-display' })
+const openSans = Open_Sans({ subsets: ['latin'], weight: ['400', '600', '700'] })
+const poppins = Poppins({ subsets: ['latin'], weight: ['500', '600', '700', '800'], variable: '--font-display' })
 const plexMono = IBM_Plex_Mono({ subsets: ['latin'], weight: ['500', '600'], variable: '--font-mono' })
 
 export const metadata: Metadata = {
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es">
-      <body className={`${inter.className} ${fraunces.variable} ${plexMono.variable}`}>{children}</body>
+      <body className={`${openSans.className} ${poppins.variable} ${plexMono.variable}`}>{children}</body>
     </html>
   )
 }

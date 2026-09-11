@@ -10,10 +10,10 @@ export default function ConfirmarPage() {
       flexDirection: 'column',
     }}>
       {/* HEADER */}
-      <header style={{ background: '#003F6B', padding: '16px 24px' }}>
+      <header style={{ background: '#003366', padding: '16px 24px' }}>
         <div style={{ maxWidth: 960, margin: '0 auto', display: 'flex', alignItems: 'center', gap: 10 }}>
           <img src="/logo-afcademia.webp" alt="AFCademía" width={36} height={36} style={{ background: '#fff', borderRadius: 8, padding: 4 }} />
-          <span style={{ color: '#fff', fontWeight: 800, fontSize: 18, letterSpacing: '-0.5px' }}>AFC<span style={{ color: '#F47A20' }}>ademia</span></span>
+          <span style={{ color: '#fff', fontWeight: 800, fontSize: 18, letterSpacing: '-0.5px' }}>AFC<span style={{ color: '#FF9900' }}>ademia</span></span>
         </div>
       </header>
 
@@ -27,26 +27,26 @@ export default function ConfirmarPage() {
           maxWidth: 480,
           width: '100%',
           textAlign: 'center',
-          boxShadow: '0 8px 40px rgba(0,63,107,0.08)',
+          boxShadow: '0 8px 40px rgba(0,51,102,0.08)',
         }}>
           {/* Email icon */}
           <div style={{
             width: 80,
             height: 80,
             borderRadius: '50%',
-            background: 'rgba(0,63,107,0.08)',
+            background: 'rgba(0,51,102,0.08)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             margin: '0 auto 24px',
           }}>
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#003F6B" strokeWidth="1.5">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#003366" strokeWidth="1.5">
               <rect x="2" y="4" width="20" height="16" rx="2"/>
               <path d="M2 8l10 5 10-5"/>
             </svg>
           </div>
 
-          <h1 style={{ fontSize: 26, fontWeight: 900, color: '#003F6B', marginBottom: 12, lineHeight: 1.2 }}>
+          <h1 style={{ fontSize: 26, fontWeight: 900, color: '#003366', marginBottom: 12, lineHeight: 1.2 }}>
             ¡Revisa tu email!
           </h1>
 
@@ -54,7 +54,7 @@ export default function ConfirmarPage() {
             Te hemos enviado un email de confirmación.
           </p>
           <p style={{ fontSize: 15, color: '#7a7060', lineHeight: 1.6, marginBottom: 32 }}>
-            Haz clic en el enlace del email para confirmar tu dirección y acceder inmediatamente a los <strong style={{ color: '#003F6B' }}>5 materiales de la charla</strong>.
+            Haz clic en el enlace del email para confirmar tu dirección y acceder inmediatamente a los <strong style={{ color: '#003366' }}>5 materiales de la charla</strong>.
           </p>
 
           {/* Steps */}
@@ -69,7 +69,7 @@ export default function ConfirmarPage() {
                   width: 28,
                   height: 28,
                   borderRadius: '50%',
-                  background: '#F47A20',
+                  background: '#FF9900',
                   color: '#fff',
                   fontSize: 13,
                   fontWeight: 700,
@@ -86,8 +86,8 @@ export default function ConfirmarPage() {
           </div>
 
           <div style={{
-            background: 'rgba(0,63,107,0.05)',
-            border: '1px solid rgba(0,63,107,0.1)',
+            background: 'rgba(0,51,102,0.05)',
+            border: '1px solid rgba(0,51,102,0.1)',
             borderRadius: 10,
             padding: '12px 16px',
             fontSize: 13,
@@ -95,7 +95,7 @@ export default function ConfirmarPage() {
             lineHeight: 1.5,
           }}>
             ¿No lo ves? Revisa la carpeta de <strong>spam o promociones</strong>. Si aun así no llega, escríbenos a{' '}
-            <a href="mailto:cursos@afcademia.com" style={{ color: '#003F6B', fontWeight: 600 }}>cursos@afcademia.com</a>
+            <a href="mailto:cursos@afcademia.com" style={{ color: '#003366', fontWeight: 600 }}>cursos@afcademia.com</a>
           </div>
         </div>
       </div>
