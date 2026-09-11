@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
-import { supabaseAdmin } from '@/lib/supabase/admin'
+import { getSupabaseAdmin } from '@/lib/supabase/admin'
 import { EVENTO } from '@/shared/constants/evento'
 
 const LeadSchema = z.object({
@@ -20,6 +20,7 @@ export async function POST(request: NextRequest) {
   const now = new Date().toISOString()
 
   try {
+    const supabaseAdmin = getSupabaseAdmin()
     const { data: lead, error: leadError } = await supabaseAdmin
       .from('leads')
       .upsert(

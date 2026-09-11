@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
-import { supabaseAdmin } from '@/lib/supabase/admin'
+import { getSupabaseAdmin } from '@/lib/supabase/admin'
 
 const Schema = z.object({ token: z.string().trim().min(8).max(200) })
 
@@ -11,6 +11,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ status: 'invalid' })
   }
 
+  const supabaseAdmin = getSupabaseAdmin()
   const { data, error } = await supabaseAdmin
     .from('access_tokens')
     .select('id, used, expires_at, leads(nombre)')
