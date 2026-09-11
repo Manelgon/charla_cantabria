@@ -88,7 +88,7 @@ function MaterialItem({ m }: { m: typeof MATERIALS[0] }) {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            color: '#FF9900',
+            color: '#F87808',
             fontSize: 20,
             transition: 'transform 0.2s',
             transform: expanded ? 'rotate(180deg)' : 'rotate(0deg)',
@@ -110,8 +110,8 @@ function MaterialItem({ m }: { m: typeof MATERIALS[0] }) {
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              background: 'rgba(255,153,0,0.1)',
-              color: '#FF9900',
+              background: 'rgba(248,120,8,0.1)',
+              color: '#F87808',
               border: 'none',
               padding: '12px 16px',
               borderRadius: 8,
@@ -124,10 +124,10 @@ function MaterialItem({ m }: { m: typeof MATERIALS[0] }) {
               transition: 'background 0.2s',
             }}
             onMouseEnter={e => {
-              (e.target as HTMLElement).style.background = 'rgba(255,153,0,0.2)'
+              (e.target as HTMLElement).style.background = 'rgba(248,120,8,0.2)'
             }}
             onMouseLeave={e => {
-              (e.target as HTMLElement).style.background = 'rgba(255,153,0,0.1)'
+              (e.target as HTMLElement).style.background = 'rgba(248,120,8,0.1)'
             }}
           >
             🔗 Abrir recurso
@@ -139,7 +139,7 @@ function MaterialItem({ m }: { m: typeof MATERIALS[0] }) {
               window.location.href = `/api/download?file=${encodeURIComponent(fileName + '.html')}`
             }}
             style={{
-              background: '#FF9900',
+              background: '#F87808',
               color: '#fff',
               border: 'none',
               padding: '12px 16px',
@@ -154,7 +154,7 @@ function MaterialItem({ m }: { m: typeof MATERIALS[0] }) {
               (e.target as HTMLElement).style.background = '#e06b1b'
             }}
             onMouseLeave={e => {
-              (e.target as HTMLElement).style.background = '#FF9900'
+              (e.target as HTMLElement).style.background = '#F87808'
             }}
           >
             ⬇️ Descargar HTML
@@ -310,7 +310,7 @@ function DescargaContent() {
         position: 'relative',
         overflow: 'hidden',
       }}>
-        <div style={{ position: 'absolute', top: -40, right: -40, width: 200, height: 200, borderRadius: '50%', background: 'rgba(255,153,0,0.15)', pointerEvents: 'none' }} />
+        <div style={{ position: 'absolute', top: -40, right: -40, width: 200, height: 200, borderRadius: '50%', background: 'rgba(248,120,8,0.15)', pointerEvents: 'none' }} />
         <div style={{ maxWidth: 640, margin: '0 auto', textAlign: 'center', position: 'relative' }}>
           <div style={{ fontSize: 44, marginBottom: 16 }}>🎉</div>
           <h1 style={{ color: '#fff', fontSize: 'clamp(22px, 4vw, 38px)', fontWeight: 900, marginBottom: 12, lineHeight: 1.2 }}>
@@ -339,13 +339,13 @@ function DescargaContent() {
           position: 'relative',
           overflow: 'hidden',
         }}>
-          <div style={{ position: 'absolute', top: -30, right: -30, width: 180, height: 180, borderRadius: '50%', background: 'rgba(255,153,0,0.15)', pointerEvents: 'none' }} />
+          <div style={{ position: 'absolute', top: -30, right: -30, width: 180, height: 180, borderRadius: '50%', background: 'rgba(248,120,8,0.15)', pointerEvents: 'none' }} />
           <div style={{ position: 'relative', maxWidth: 620 }}>
             <div style={{
               display: 'inline-block',
-              background: 'rgba(255,153,0,0.2)',
-              border: '1px solid rgba(255,153,0,0.4)',
-              color: '#FF9900',
+              background: 'rgba(248,120,8,0.2)',
+              border: '1px solid rgba(248,120,8,0.4)',
+              color: '#F87808',
               fontSize: 11, fontWeight: 700, letterSpacing: '0.1em',
               textTransform: 'uppercase' as const,
               padding: '5px 14px', borderRadius: 100, marginBottom: 20,
@@ -365,7 +365,7 @@ function DescargaContent() {
             <div style={{ display: 'flex', flexWrap: 'wrap' as const, gap: 12, marginBottom: 28 }}>
               {['Flujos completos de automatización', 'Casos reales de fincas', 'Comunidad de administradores', 'Actualizaciones incluidas'].map(b => (
                 <div key={b} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FF9900" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#F87808" strokeWidth="2.5"><path d="M20 6L9 17l-5-5"/></svg>
                   <span style={{ color: 'rgba(255,255,255,0.85)', fontSize: 14 }}>{b}</span>
                 </div>
               ))}
@@ -381,10 +381,10 @@ function DescargaContent() {
               }}
               style={{
                 display: 'inline-flex', alignItems: 'center', gap: 8,
-                background: '#FF9900', color: '#fff',
+                background: '#F87808', color: '#fff',
                 padding: '15px 28px', borderRadius: 12,
                 fontSize: 15, fontWeight: 700, textDecoration: 'none',
-                boxShadow: '0 0 30px rgba(255,153,0,0.35)',
+                boxShadow: '0 0 30px rgba(248,120,8,0.35)',
               }}
             >
               Descubrir AFCademIA
@@ -419,7 +419,7 @@ function PageShell({ children }: { children: React.ReactNode }) {
       <header style={{ background: '#003366', padding: '16px 24px' }}>
         <div style={{ maxWidth: 960, margin: '0 auto', display: 'flex', alignItems: 'center', gap: 10 }}>
           <img src="/logo-afcademia.webp" alt="AFCademía" width={34} height={34} style={{ background: '#fff', borderRadius: 8, padding: 4 }} />
-          <span style={{ color: '#fff', fontWeight: 800, fontSize: 17 }}>AFC<span style={{ color: '#FF9900' }}>ademia</span></span>
+          <span style={{ color: '#fff', fontWeight: 800, fontSize: 17 }}>AFC<span style={{ color: '#F87808' }}>ademia</span></span>
         </div>
       </header>
       {children}

@@ -13,7 +13,7 @@ export default function ConfirmarPage() {
       <header style={{ background: '#003366', padding: '16px 24px' }}>
         <div style={{ maxWidth: 960, margin: '0 auto', display: 'flex', alignItems: 'center', gap: 10 }}>
           <img src="/logo-afcademia.webp" alt="AFCademía" width={36} height={36} style={{ background: '#fff', borderRadius: 8, padding: 4 }} />
-          <span style={{ color: '#fff', fontWeight: 800, fontSize: 18, letterSpacing: '-0.5px' }}>AFC<span style={{ color: '#FF9900' }}>ademia</span></span>
+          <span style={{ color: '#fff', fontWeight: 800, fontSize: 18, letterSpacing: '-0.5px' }}>AFC<span style={{ color: '#F87808' }}>ademia</span></span>
         </div>
       </header>
 
@@ -69,7 +69,7 @@ export default function ConfirmarPage() {
                   width: 28,
                   height: 28,
                   borderRadius: '50%',
-                  background: '#FF9900',
+                  background: '#F87808',
                   color: '#fff',
                   fontSize: 13,
                   fontWeight: 700,
