@@ -10,3 +10,8 @@ export const EVENTO = {
   flujo: 'materiales-charla-zaragoza-2026',
   tags: ['charla-zaragoza-2026', 'automatiza-email'],
 } as const
+
+export const AFCADEMIA = {
+  web: 'https://afcademia.com',
+  catalogo: 'https://afcademia.com/tienda/',
+} as const
